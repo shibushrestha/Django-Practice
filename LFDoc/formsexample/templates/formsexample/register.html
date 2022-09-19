@@ -1,0 +1,27 @@
+<form action="/formsexample/create-person/" method="post" novalidate>
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {{ form.errors.username }}
+    {{ form.username.label }}
+    {{ form.username }}<br><br>
+
+    {{ form.errors.first_name }}
+    {{ form.first_name.label }}
+    {{ form.first_name }}<br><br>
+
+    {{ form.errors.last_name }}
+    {{ form.last_name.label }}
+    {{ form.last_name }}<br><br>
+
+    {{ form.date_of_birth.label }}
+    {{ form.date_of_birth }}<br><br>
+
+    {{form.errors.email }}
+    {{ form.email.label }}
+    {{ form.email }}<br><br>
+    
+    {{ form.comments.label }}<br>
+    {{ form.comments }}<br><br>
+
+    <input type="submit">
+</form>

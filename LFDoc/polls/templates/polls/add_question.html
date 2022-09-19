@@ -1,0 +1,22 @@
+<p> You can shortly add question for the polls app. Thankyou</p>
+<form  action="{% url 'polls:addquestion' %}" method="post">
+{% csrf_token %}	
+	<label for="">Add a question:</label>
+	<input style="width:600px; height:40px" type="text" name="question_text" id="question_text" value=""><br><br>
+	
+	<!-- Add choices to question -->
+
+	<label for="choice_text1"></label> 
+	<input style="width:100px; height:30px" type="text" name="choice_text1" id="choice_text1" value="{{choice_text}}">
+	
+	<label for="choice_text2"></label> 
+	<input style="width:100px; height:30px" type="text" name="choice_text2" id="choice_text2" value="{{choice_text}}">
+	
+	<label for="choice_text3"></label> 
+	<input style="width:100px; height:30px" type="text" name="choice_text3" id="choice_text3" value="{{choice_text}}">
+	
+	<label for="choice_text4"></label> 
+	<input style="width:100px; height:30px" type="text" name="choice_text4" id="choice_text4" value="{{choice_text}}">
+	
+	<input style="width:70px; height:30px" type="submit" value="Add">
+</form>
